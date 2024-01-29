@@ -12,9 +12,9 @@ app.config['BASIC_AUTH_PASSWORD'] = 'kirvptc'
 basic_auth = BasicAuth(app)
 
 # Detect credentials.json in the same directory
-cred_path = os.path.join(os.path.dirname(__file__), "ptc-iot-digital-signage-e4d51-firebase-adminsdk-bimit-28d6a1ea0d.json")
+cred_path = os.path.join(os.path.dirname(__file__), "ptc-iot-digital-signage-test-firebase-adminsdk-2zuhv-079eb5493d.json")
 cred = credentials.Certificate(cred_path)
-firebase_admin.initialize_app(cred, {"storageBucket": "ptc-iot-digital-signage-e4d51.appspot.com"})
+firebase_admin.initialize_app(cred, {"storageBucket": "ptc-iot-digital-signage-test.appspot.com"})
 
 @app.route("/")
 @basic_auth.required
